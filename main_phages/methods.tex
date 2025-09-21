@@ -1,0 +1,38 @@
+\chapter{Methods}
+\label{chap:phage_methods}
+
+This chapter introduces the PDE model used in this part of the thesis and the respective observables defined to quantify results.
+
+\section{Model}
+Inspired by the continuous evolution in the experimental work by Tamar et al.~\cite{ShaerTamar2022}, we used previously established models~\cite{Ping2020, Wang2024, Smith2011, Yin1992}. Some of these models do not account for diffusing bacteria, some are not accounting for resistance evolution and others use chemotaxis in the model to accurately reproduce experimental results through fitting necessary parameters. We used this inspiration and adapted and simplified the respective models to understand the interactions between bacteria, resistant bacteria and phages when varying different intrinsic parameters.
+There are varying reports for different environments about the values of the model parameters and their ratios~\cite{Eriksen2020, Ping2020}.
+Therefore, we conduct a parameter exploration as part of this work, focusing on ratios between parameters as previously experimentally determined~\cite{Tavaddod2011, Moldovan2007, Payne2018}.
+
+The interactions within our model are graphically depicted in Figure \ref{fig:model_sketch} while excluding diffusion and nutrients for simplicity of the sketch.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, ]{2024_11_18_model}
+\caption{Sketch of the model for bacteria-phage interactions}
+\label{fig:model_sketch}
+\end{figure}
+
+Our model is most similar to the model used to describe the hitchhiking effect of phages in bacteria~\cite{Ping2020} and is given by the following PDEs:
+
+\begin{align}
+    \frac{\text{d}S}{\text{d}t} = D_b &\frac{\partial^2S}{\partial x^2} + \left[ \left( 1 - \mu_{to} \right) \lambda_S S + \mu_{back} \lambda_R R \right] \frac{n}{K_n+n}  - \eta SP \\
+    \frac{\text{d}I}{\text{d}t} = D_b &\frac{\partial^2I}{\partial x^2} + \lambda_S I \frac{n}{K_n+n}  + \eta SP - \beta I\\
+    \frac{\text{d}R}{\text{d}t} = D_b &\frac{\partial^2R}{\partial x^2} + \left[ \left( 1 - \mu_{back} \right) \lambda_R R + \mu_{to} \lambda_S S \right] \frac{n}{K_n+n}\\
+    \frac{\text{d}P}{\text{d}t} = D_p &\frac{\partial^2P}{\partial x^2} + \beta BI - \eta SP \\
+    \frac{\text{d}n}{\text{d}t} = D_n &\frac{\partial^2n}{\partial x^2} - \frac{1}{Y} \left( \lambda_S S + \lambda_S I + \lambda_R R \right) \frac{n}{K_n+n}
+\end{align}
+where $D_b$, $D_p$ and $D_n$ are the respective diffusion rates, $\mu_{to}$ and $\mu_{back}$ are the towards and backwards mutation rates, $\lambda_S$ and $\lambda_R$ are the respective growth rates, $K_n$ is the half-velocity constant, $\eta$ is the infection rate, $\beta$ is the lysis rate, $B$ is the burst size and $Y$ is the nutrient yield. To improve readability, we omit dependencies on space and time for all variables. The model can easily be generailzed to multiple dimensions but we focus here on the most simple one dimensional case.
+
+These equations can be non-dimensionalized using the following transformations:
+
+\begin{align}
+
+\end{align}
+
+
+Numerical simulations of the equations were performed in python, using custom-built functions. We implemented an implicit Crack-Nicholson scheme for simulating the equations. A fixed time step of xxx was chosen.  

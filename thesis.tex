@@ -14,7 +14,7 @@
 % Additionally, you must specify the degree for which you're writing
 % your thesis (MSc/PhD/MArch etc.)
 %
-\documentclass[PhD,with-ethics-statement]{misc/iitthesis}
+\documentclass[PhD, with-ethics-statement, fullpageDraft, beforeDefense]{misc/iitthesis}
 
 
 % Definitions of info fields for the thesis - subject, advisor,
@@ -69,7 +69,9 @@
 % To conform to Technion regulations, the main matter should begin
 % with an introduction (including a survey of relevant past work):
 %
-\include{main/intro}
+\include{main_droplets/intro}
+\include{main_droplets/mainchap1}
+\include{main_droplets/conclusion}
 
 %
 % and then cover:
@@ -84,9 +86,12 @@
 % system setup, and/or a final chapter with summary, discussion and further
 % research direction or questions)
 
-\include{main/prelims}
-\include{main/mainchap1}
-\include{main/conclusion}
+\include{main_phages/intro}
+
+\include{main_phages/prelims}
+\include{main_phages/methods}
+\include{main_phages/results}
+\include{main_phages/conclusion}
 %
 % Add any appendices here; they must come _before_ the bibliography
 %
