@@ -16,7 +16,15 @@ Wave speed and therefore also the bacterial competition are known to not only de
 \section{Impact of parameters}
 Our model includes several other parameters, some of which could impact the dynamics. In this section, we are focusing on the phage diffusion rate and the infection rate, both known as parameters whose change can change the phage speed and indeed, we observe that the described protective effect vanishes when phages diffuse faster or the infection rate is higher. However, while we observe a similar impact of the infection rate in a scenario without resistant bacteria, we do not observe this impact for the phage diffusion rate. 
 \section{Limitations}
+Some phages replicate only on growing bacteria due to the dependence on the replication machinery of bacteria. Therefore, we explored such a scenario by limiting the infection rate indirectly through a dependence on the nutrients with:
 
+\begin{equation}
+    \eta = \eta_0 \frac{n}{K_n + n}
+\end{equation}
+
+where $\eta_0$ is set to be the same infection rate as in the scenario without this dependence.
+In this scenario, we were unable to observe the protective effect and we rather see a phase transition due to fitness of resistant and sensitive bacteria. Furthermore, if comparing it to a no-phage scenario, where bacteria compete without phages in the system, we see only minor differences between these cases.
+This means that the ability for phages to replicate on non-growing bacteria is crucial for the protective effect to exist.
 
 % \chapter{A main chapter}
 % \label{chap:firstchap}
