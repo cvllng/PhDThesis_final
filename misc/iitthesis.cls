@@ -326,8 +326,8 @@
 \iitthesis@thesisdatafield{disciplineHebrew}{שם התחום המדעי}
 \iitthesis@thesisdatafield{supervisionEnglish}{Information regarding the supervision and supervisors}
 \iitthesis@thesisdatafield{supervisionHebrew}{מידע על המנחים וההנחיה}
-\iitthesis@thesisdatafield{publicationInfoHebrew}{ציון אם העבודה פורסמה בכתבי עת או  הוצגה בכנסים. הרשימה תכתב בהתאם לכללי הציטוט (כולל הכותר ושמות השותפים). במקרה של שיתוף פעולה, פירוט תרומת המגיש.}
-\iitthesis@thesisdatafield{publicationInfoEnglish}{Info about whether the contents of the thesis was published, about collaborators and the thesis author's contribution.}
+\iitthesis@thesisdatafield{publicationInfoHebrew}{}
+\iitthesis@thesisdatafield{publicationInfoEnglish}{}
 \iitthesis@thesisdatafield{ethicsStatementHebrew}{הצהרה אודות עמידת המחקר, והחיבור, בכללים אתיים.}
 \iitthesis@thesisdatafield{ethicsStatementEnglish}{Statement regarding adherence to ethical standards --- of the research activity and of the thesis.}
 \iitthesis@thesisdatafield{GregorianDateEnglish}{Gregorian Month and Year}

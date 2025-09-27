@@ -3,16 +3,47 @@
 
 \section{Chemostat observations}
 
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{graphics/2025_09_26_droplets_fig2.png}
+\caption{\textbf{Chemostat vs. traveling wave shows protective effect}}
+\label{fig:results_chemostat_traveling_wave}
+\end{figure}
+
 \section{Traveling wave dynamics}
 Simulating the model with diffusion and initial conditions such that the nutrients are constant and bacteria and phages are concentrated on one side of the system, we obtain a traveling wave dynamics, where bacteria and phages travel together through the system, invading previously unoccupied regions. The nutrients are receding, allowing a sensitive front to be formed. Trailing behind is a phage front which restricts the sensitive bacteria to a narrow region between its front and the phage front. In a narrow intermediate region, a small peak of infected bacteria forms. Resistant bacteria travel uninhibited by phages through the system. These dynamics resemble previously observed experimental results. 
 \section{Protection by resistant bacteria}
 Using the established model, we can vary the growth rate of resistant bacteria relative to sensitive bacteria. For low growth rates, we observe survival of sensitive bacteria. For resistant bacteria growth rates higher than the sensitive bacteria growth rate, we see no survival of sensitive bacteria in the system. Surprisingly, for growth rates just below the expected transition point at equal growth rate, we observe a protective effect of the resistant bacteria resulting in an increased amount of sensitive bacteria. \textbf{Figure here} When studying the change of the amount of sensitive bacteria around the maximum over time, we observe a change from a regime where the amount stabilizes quickly and stays constant over a regime where the amount of bacteria constantly linearly increases over time to a regime where after an initial increase, the amount collapses and plateaus or goes towards extinction. \textbf{Figure here} 
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{graphics/2025_09_26_droplets_fig3.png}
+\caption{\textbf{Closer examination of the protective peak reveals widening}}
+\label{fig:results_peak_change_height_width}
+\end{figure}
+
 \section{Widening causes protection}
 When studying the width and height of the traveling wave of bacteria, we observe the explanation for the observed protective effect. Monitoring the observed protective peak, we see a transition from a narrow, high peak to a shallow but wide peak of sensitive bacteria with increasing resistant growth rate. Once resistant bacteria grow faster, the sensitive peak disappears. The linear increase in width suggests that the two wavefronts, sensitive bacteria and phages, separated and travel with constant but different speeds. Indeed, measuring the speeds of these two fronts, we observe that the phage front slows down at a lower resistant growth rate than the sensitive bacteria front. However, measuring the difference in speed, we observe that the maximal difference is at a higher growth rate than the observed protective effect. However, as is apparent from our previous height and width analysis, for higher growth rates, the peak is diminished and indeed, multiplying speed with height as a new quantification of the effect, we observe an effect for those growth rates which also reveal the protective effect. So overall, the product of speed difference and height explains the observed protective effect. 
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{graphics/2025_09_26_droplets_fig4.png}
+\caption{\textbf{Speed difference identified as cause for widening}}
+\label{fig:results_speed_height}
+\end{figure}
+
 \section{Nutrient sparsity weakly protects}
 Previous models, studying a phage wave invading an exponentially growing, sensitive population~\cite{BLA} show a separation between the speed of the receding sensitive wave and the speed of the advancing phage wave without resistant bacteria present in the system. Motivated by this results, we are studying in this section, whether we can observe the protective effect in a system without resistant bacteria when instead limiting the available nutrients. Lowering the initially available nutrients in the system, reduces the speed of both waves while for very nutrient concentrations and therefore low speeds a minor speed difference occurs. However, this effect is much smaller than the effect obtained when resistant bacteria are present in the system. Therefore, we conclude that resistant bacteria are necessary to observe the protective effect.
 \section{Impact of resistant diffusion rate}
-Wave speed and therefore also the bacterial competition are known to not only depend on the growth rate but also on the diffusion rate of the bacteroa. Therefore, we analysed the impact changes in both of these parameters on the amount of sensitive bacteria and we found a clear phase transition from a paremeter regime in which sensitive bacteria survive to a parameter regime in which sensitive bacteria do not survive. \textbf{Figure here} Close to the transition interface, we observe the protective effect we previously described in section \textbf{Reference here}. There seems to be a linear correlation between growth rate and diffusion rate for low growth rates, in agreement with the theoretical results for the KPP-equation. However, for higher growth rates, this linear relation collapses and we observe a dominant effect of growth rate rather than diffusion rate.
+Wave speed and therefore also the bacterial competition are known to not only depend on the growth rate but also on the diffusion rate of the bacteria. Therefore, we analysed the impact changes in both of these parameters on the amount of sensitive bacteria and we found a clear phase transition from a paremeter regime in which sensitive bacteria survive to a parameter regime in which sensitive bacteria do not survive. \textbf{Figure here} Close to the transition interface, we observe the protective effect we previously described in section \textbf{Reference here}. There seems to be a linear correlation between growth rate and diffusion rate for low growth rates, in agreement with the theoretical results for the KPP-equation. However, for higher growth rates, this linear relation collapses and we observe a dominant effect of growth rate rather than diffusion rate.
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{graphics/2025_09_26_droplets_fig5.png}
+\caption{\textbf{Phase transition with two parameters with protective effect}}
+\label{fig:results_heatmap_effect}
+\end{figure}
+
 \section{Impact of parameters}
 Our model includes several other parameters, some of which could impact the dynamics. In this section, we are focusing on the phage diffusion rate and the infection rate, both known as parameters whose change can change the phage speed and indeed, we observe that the described protective effect vanishes when phages diffuse faster or the infection rate is higher. However, while we observe a similar impact of the infection rate in a scenario without resistant bacteria, we do not observe this impact for the phage diffusion rate. 
 \section{Limitations}
