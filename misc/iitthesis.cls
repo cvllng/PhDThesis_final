@@ -490,7 +490,7 @@
  %
  \displayedpagenumbering{roman}{1}
 
- \makeabstractHebrew
+ %\makeabstractHebrew
  % For some reason, if you \clearpage after the Hebrew abstract, the
  % \AtEndDocument command which is part of the auto-list-of-figures
  % generation is not run; so commenting this out

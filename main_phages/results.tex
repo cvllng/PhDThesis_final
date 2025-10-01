@@ -7,7 +7,7 @@ This chapter first presents the outcomes of our model in a well-mixed chemostat 
 First we study the system in a well-mixed, chemostat environment. As expected, when increasing the dilution rate in a chemostat with only sensitive bacteria, we observe a monotonic decline in the amount of sensitive bacteria in a steady state in the chemostat~(Figure~\ref{fig:results_chemostat_traveling_wave}a, black curve). When adding phages, we observe an overall decline in sensitive bacteria. When the dilution rate is low, there are significantly less sensitive bacteria. However, in contrast to the sensitive only scenario, the amount of sensitive bacteria increases with increasing dilution rate up to a point where it is identical to this scenario. Then it declines in the same pattern with increasing dilution rate~(Figure~\ref{fig:results_chemostat_traveling_wave}a, red curve). This indicates a lower wash out rate for phages than for sensitive bacteria. Lastly, when adding resistant bacteria with equal fitness to the system, we observe a similar pattern but the amount of sensitive bacteria is lower at any point, indicating the competition over nutrients with resistant bacteria~(Figure~\ref{fig:results_chemostat_traveling_wave}a, blue curve). The peak of sensitive bacteria is reached at a lower dilution rate than without resistant bacteria. Choosing now the dilution rate at this peak, we study the change of sensitive bacteria when changing the fitness of the resistant bacteria in the system. We observe sensitive bacteria in the system for resistant fitness values lower than equal fitness and then a sharp decline at equal fitness~(Figure~\ref{fig:results_chemostat_traveling_wave}b, blue curve). This shows that resistant bacteria outcompete sensitive bacteria in a well-mixed environment as described in previous works.
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{graphics/2025_09_29_phages_fig2.png}
+\includegraphics[width=\linewidth]{graphics/2025_09_30_phages_fig3.png}
 \caption{\textbf{Chemostat shows resistant bacteria outcompete sensitive} (a) shows the amount of sensitive bacteria depending on the dilution rate for different scenarios. In black is a scenario with only sensitive bacteria, in red a scenario with phages and sensitive bacteria and in blue a scenario with phages, sensitive and resistant bacteria. (b) shows the normalized amount of sensitive bacteria changing with the growth rate of resistant bacteria for a chemostat (blue). The chemostat shows a decrease at the point of equal fitness of resistant and sensitive bacteria. This indicates that sensitive bacteria go extinct ones resistant bacteria are fit enough to take over.}
 \label{fig:results_chemostat_traveling_wave}
 \end{figure}
@@ -17,7 +17,7 @@ Simulating the model with diffusion and initial conditions such that the nutrien
 
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{graphics/2025_09_29_phages_fig3.png}
+\includegraphics[width=\linewidth]{graphics/2025_09_30_phages_fig4.png}
 \caption{\textbf{Traveling wave dynamics for $\lambda_r \approx 0.617$ and $\lambda_r \approx 1.13$} This figure shows two snapshots of the dynamics formed when solving the model for different $\lambda_r$. (a) shows a scenario with low $\lambda_r$, revealing the survival of a traveling sensitive wave which propagates ahead of a phage wave and a wave of resistant bacteria. Where phages caught up, infected bacteria are formed but they do not reach the sensitive front. (b) shows a scenario with high $\lambda_r$, revealing the overtake of the system by resistant bacteria and phages and sensitive bacteria not able to propagate due to nutrient limitations and slowly going extinct.}
 \label{fig:traveling_wave_dynamics}
 \end{figure}
@@ -28,9 +28,16 @@ Using the established model, we can vary the growth rate of resistant bacteria r
 
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{graphics/2025_09_29_phages_fig4.png}
-\caption{\textbf{Resistant bacteria protect sensitive bacteria in a structured environment} (a) shows the comparison between a chemostat and the traveling wave scenario in a spatially structured environment. The traveling wave scenario reveals a protective effect resulting in an almost three-fold increase in sensitive bacteria just before the point of equal fitness. When resistant bacteria grow faster, sensitive bacteria go extinct. (b) shows the dynamics for $\lambda_r \approx 0.99$, at the peak of protection, revealing a long-term transition state which results in a wider region of sensitive bacterial presence.}
+\includegraphics[width=\linewidth]{graphics/2025_09_30_phages_fig5.png}
+\caption{\textbf{Resistant bacteria protect sensitive bacteria in a structured environment} (a) shows the comparison between a chemostat and the traveling wave scenario in a spatially structured environment. The traveling wave scenario reveals a protective effect resulting in an almost three-fold increase in sensitive bacteria just before the point of equal fitness. When resistant bacteria grow faster, sensitive bacteria go extinct. The colored markers indicate the points for which we present the dynamics in Figure~\ref{fig:traveling_wave_dynamics} and in Figure~\ref{fig:dynamics_peak}. (b) shows the amount of sensitive bacteria at the chosen points over time, indicating plateauing for low resistant growth rates, continuous increase for the peak of the protective effect and extinction for high resistant growth rates.}
 \label{fig:protective_effect}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{graphics/2025_09_30_phages_fig6.png}
+\caption{\textbf{Dynamics over time reveal a transition state} Shown are three time snapshots of the dynamics for $\lambda_r \approx 0.99$, at the peak of protection, revealing a long-term transition state which results in a wider region of sensitive bacterial presence.}
+\label{fig:dynamics_peak}
 \end{figure}
 
 \section{Widening causes protection}
@@ -38,14 +45,14 @@ When studying the width and height of the traveling wave of bacteria, we observe
 
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{graphics/2025_09_29_phages_fig5.png}
+\includegraphics[width=\linewidth]{graphics/2025_09_30_phages_fig7.png}
 \caption{\textbf{Closer examination of the protective peak reveals widening} (a) shows a focused view on the protective peak, described earlier. (b) shows the amount of sensitive bacteria over time for the points indicated with different colors in (a). (c) and (d) show the width and height respectively over time for these chosen points.}
 \label{fig:results_peak_change_height_width}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{graphics/2025_09_26_phages_fig4.png}
+\includegraphics[width=\linewidth]{graphics/2025_09_30_phages_fig8.png}
 \caption{\textbf{Speed difference identified as cause for widening} (a) shows the speed of the expanding wave front of phages and of sensitive bacteria as a function of resistant growth rate, (b) shows the difference between these two speeds and the new measurement of the product between speed difference and height, (c) and (d) show the speed for changing two important parameters, phage diffusion and infection rate respectively.}
 \label{fig:results_speed_height}
 \end{figure}
@@ -56,7 +63,7 @@ Previous models, studying a phage wave invading an exponentially growing, sensit
 Wave speed and therefore also the bacterial competition are known to not only depend on the growth rate but also on the diffusion rate of the bacteria. Therefore, we analysed the impact changes in both of these parameters on the amount of sensitive bacteria and we found a clear phase transition from a parameter regime in which sensitive bacteria survive to a parameter regime in which sensitive bacteria do not survive~(Figure~\ref{fig:results_heatmap_effect}). Close to the transition interface, we observe the protective effect we previously described in section~\ref{sec:protective_effect}. There seems to be a linear correlation between growth rate and diffusion rate for low growth rates, in agreement with the theoretical results for the KPP-equation. However, for higher growth rates, this linear relation collapses and we observe a dominant effect of growth rate rather than diffusion rate.
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{graphics/2025_09_26_phages_fig5.png}
+\includegraphics[width=\linewidth]{graphics/2025_09_30_phages_fig9.png}
 \caption{\textbf{Phase transition with two parameters with protective effect} The heatmap shows the amount of sensitive bacteria for different combinations of resistant growth rate and resistant diffusion rate, indicating a phase transition from a region with sensitive bacteria to a region without. At the interface, we observe an increase in sensitive bacteria.}
 \label{fig:results_heatmap_effect}
 \end{figure}

@@ -3,11 +3,11 @@
 
 This chapter introduces the reaction-diffusion model used in this part of the thesis, explaining the necessary coupling terms to describe bacteria-phage interactions and the non-dimensional version of it. Then we will introduce the chemostat version of it, used to model a similar system in a well-mixed environment. Furthermore, we will introduce the respective observables which were defined to quantify results obtained from the ensuing dynamics.
 \section{Model}
-The interactions within our model are graphically depicted in Figure \ref{fig:model_sketch}a while excluding diffusion and nutrients in the sketch for simplicity.
+The interactions within our model are graphically depicted in Figure \ref{fig:model_sketch} while excluding diffusion and nutrients in the sketch for simplicity.
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{graphics/2025_09_26_phages_fig1.png}
-\caption{\textbf{Sketch of the model and observables} (a) shows a sketch of the model used in this project. Sensitive bacteria, depicted in blue, grow with a growth rate $\lambda_s$ and are infected by phages, depicted in orange, with an infection rate $\eta$. This infection process forms infected bacteria, depicted in pink, which burst with a burst rate $\beta$ and upon lysis release $B$ new phages. In addition resistant bacteria, depicted in brown, are present in the system, grow with a growth rate $\lambda_r$ and sensitive bacteria can mutate to become resistant with mutation rate $\mu_{to}$. Both growth rates are changing depending on nutrient availability. (b) shows an example time snapshot for a traveling wave in the dynamics. The shaded area is the amount of bacteria or phages we measure and in addition the maximum of the wave is measured as the height and the width is measured.}
+\includegraphics[width=\linewidth]{graphics/2025_09_30_phages_fig1.png}
+\caption{\textbf{Sketch of the reaction-diffusion model} Sensitive bacteria, depicted in blue, grow with a growth rate $\lambda_s$ and are infected by phages, depicted in orange, with an infection rate $\eta$. This infection process forms infected bacteria, depicted in pink, which burst with a burst rate $\beta$ and upon lysis release $B$ new phages. In addition resistant bacteria, depicted in brown, are present in the system, grow with a growth rate $\lambda_r$ and sensitive bacteria can mutate to become resistant with mutation rate $\mu_{to}$. Both growth rates are changing depending on nutrient availability.}
 \label{fig:model_sketch}
 \end{figure}
 Our model is most similar to the model used to describe the hitchhiking effect of phages in bacteria~\cite{Ping2020-vd} and is given by the following set of~\gls{pde}s:
@@ -65,5 +65,10 @@ Numerical simulations of the equations were performed in python, using \text{sci
 Commonly, we use $t_{max} = 910$, $N = 600$ and $dx = \sqrt{65}/6$.
 
 \section{Observables}
-
-We describe and quantify the dynamics being created by solving our model system using three observables for the forming traveling wave. We measure the amount of bacteria which is represented as the area under the curve and additionally we measure the height and the width at 1e-6 of the maximum of the curve as represented in Figure~\ref{fig:model_sketch}b.
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{graphics/2025_09_30_phages_fig2.png}
+\caption{\textbf{Example time snapshot for a traveling wave in the dynamics} The shaded area is the amount of bacteria or phages we measure and in addition the maximum of the wave is measured as the height and the width is measured.}
+\label{fig:observable_sketch}
+\end{figure}
+We describe and quantify the dynamics being created by solving our model system using three observables for the forming traveling wave. We measure the amount of bacteria which is represented as the area under the curve and additionally we measure the height and the width at 1e-6 of the maximum of the curve as represented in Figure~\ref{fig:observable_sketch}.
