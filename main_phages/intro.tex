@@ -1,99 +1,24 @@
-\part{Phage-resistant bacteria protect sensitive bacteria in a spatial environment}
+\part{Phage-resistant bacteria protect phage-sensitive bacteria in a spatial environment}
 \chapter{Introduction}
 \label{chap:intro}
-% % do we need to add TOC lines?
-
-% %\begin{figure}
-% %  \centering
-% %  \includegraphics[width=0.75\textwidth]{main/graphics/a_blowup.pdf}
-% %  \caption{This is a caption}
-% %\end{figure}
-
-% Here you can introduce the field, survey past results, give context, use citations of course... (e.g. \cite{CLR}). It is probably worthwhile to clarify the goals or targets of the research and describe the process, unless this is done later.
-
-% You can also introduce \emph{a key concept} (or rather, several) without formally defining them until later on.
-
-% \subsection*{An unnumbered subsection}
-
-% You may want to break up the intro into parts with titles. Subsectioning without numbering is an option you might want to consider.
-
-% Some people include a specific section overviewing the results ("In Chapter so-and-so, we will see how etc.") which is also a way of describing the structure of the thesis. But this is not necessary.
-
-% \subsection*{Thesis options and appearance}
-
-% Please note that the \texttt{iitthesis} class has several options when you use it, such as:
-% \begin{itemize}
-% \item \texttt{fullpageDraft} to avoid the margins necessary for proper binding when you make the final print
-% \item \texttt{beforeDefense} makes the personal acknowledgements invisible; use this to print the copies you submit initially to the grad school for sending to the opponent panel, i.e. thesis readers (who shouldn't see those parts). For the final submission, after having successfully defended --- drop this option. 
-% \item \texttt{noabbrevs} no notation \& abbreviations list will be included in the thesis.
-% \end{itemize}
-
-% \subsection*{Hebrew font}
-
-% The \texttt{iitthesis} document class uses the David CLM font family for Hebrew text. CLM is a shorthand for ``Culmus'' (\texthebrew{קולמוס}) --- the name of a freely-available Hebrew font package. It may be bundled with your LaTeX distribution, or otherwise, must be available as system fonts. If you're missing the Culmus fonts, try adding an appropriate package from your LaTeX distribution or system distribution; alternatively, you might want to visit the Culmus project page at \url{http://culmus.sourceforge.net/} and download and install the fonts manually.
-
-% \subsection*{Setting thesis meta-data and publication information}
-
-% The document class used to generate this document defines several commands you can use to set information  regarding your thesis, which is used in the title pages and elsewhere in the front matter.  Every (or almost every) command has an English and a Hebrew variant, with a \texttt{English} or \texttt{Hebrew} suffix to the command name. Examples:
-% \begin{itemize}
-% \item \verb|\titleHebrew|, \verb|\titleEnglish|
-% \item \verb|\authorHebrew|, \verb|\authorEnglish|
-% \item \verb|\JewishDateHebrew|, \verb|\JewishDateEnglish|
-% \item \verb|\GregorianDateHebrew|, \verb|\GregorianDateEnglish|
-% \item \verb|\publicationinfoHebrew|, \verb|\publicationinfoEnglish|
-% \end{itemize}
-
-% The file \texttt{misc/thesis-fields.tex} contains invocations of several such commands (some of them commented-out with \texttt{\%}), and some additional information about them.
 
 This chapter introduces the key biological concepts for this project, namely bacteriophages and their interaction with bacteria. Furthermore, this chapter introduces the importance of spatial structure in natural environments and its impact on ecological dynamics. Lastly, we introduce reaction-diffusion equations, the class of computational models used in this project to simulate dynamics in a spatially structured environment and we highlight some applications of such models.
 
-% \section{General overview}
-
-% Over the last decades, bacteria and bacteriophages (phages) became a model system to study host-parasite interactions, however they were lagging behind other systems in understanding their coevolution and ecology~\cite{Koskella2014-yp}.
-% Despite the early proof that bacteria and phages can coexist in liquid media~\cite{Chao1977-rj}, it was also early on shown that evolution stagnates rapidly in these chemostat cultures~\cite{Lenski1985-wb} and different explanations were proposed why a continuous coevolution is not taking place~\cite{Lenski1984-ei}, recent experiments and models started taking spatial structure of the system's environment into account given the prevalence of spatial structure in natural environments such as biofilms~\cite{Krysiak-Baltyn2016-xi, Gourley2004-rx}. Most work in spatially structured systems focuses on ecological interactions and does not involve possible evolution which might influence the dynamics through evolution. Recent experimental work~\cite{Shaer-Tamar2022-cq} studied the interaction and evolution of bacteria and phages on agar and showed that evolution can persist in such a scenario.
-
-% Combining the recently acknowledged importance of this structure with theory of traveling waves which was recently partly applied to expanding bacteria-phage populations~\cite{Wang2024-ye, Claydon2021-cu}
-% A more recent attempt to include spatial structure through diffusion in these models was performed by Eriksen et al, 2020 and they use PDEs to model sensitive bacteria, phages and infected bacteria. They compare different models from well-mixed to highly structured environments and conclude that latency time has a huge effect on the survival of bacteria. They also vary the phage inoculum to see how this changes the survival rate of bacteria.
-% They claim there is no reported case of full bacteria elimination in experiments
-% Chaudry et al showed experimentally that there exists some "leaky resistance" resulting in transition from resistant to sensitive phenotype or genotype (2018).
-
-% There are several proposed mechanisms to guarantee survival of sensitive bacteria and therefore phage survival in a majority resistant population. Chaudry et al nicely summarize them. In well mixed conditions with a specific phage they could show that back mutation can be a leading factor to generate new sensitive bacteria.
-
-% Heilmann et al, 2012 showed that at the boundary between two regions (one favorable for phages, one for bacteria), those two can coexist with an interface between them. This interface depends on degradation rate and on infection rate
-
-% Simmons et al, 2020 published a very related study modeling phage infection in biofilms composed of sensitive and resistant bacteria promoting coexistence due to small pockets of sensitive bacteria being shielded by the resistant bacteria. Starting with little resistant bacteria leads to an increase of resistant bacteria until they are able to provide the required protection.
-
-% Hilborn in 1975 studies the effect of dispersal/diffusion of prey and predator and can show that faster prey and slower predators lead to survival of the prey in space similar to diffusion of phages and bacteria. They do not study resistant prey.
-
-% Testa et al (2019) study the influence of spatial structure on phage infection in colonies on agar plates as well as in liquid. They use two Pseudomonas strains (one sensitive to phages, one insensitive) and show that resistance can evolve but not necessarily. Nonetheless, the coexisting insensitive strain can protect the sensitive strain and guarantee its survival without leading to a resistant genotype. They traced this to the mixing and the effective population size at the edge of the colony being relatively small which decreases the chance to obtain a resistant phenotype while also reducing the phage replication and therefore reducing the number of phages. This was verified by finding uninfected bacteria in the colony center. However, when they tried to reproduce this with evolved resistant bacteria, they failed to show that the resistant bacteria provide protection for sensitive bacteria against phage infection and the phage load was not significantly reduced in the center of the colony. It is hypothesized that this is due to the reduced fitness of resistant bacteria. Growth arrest of the bacteria however prevents phages from infecting all sensitive bacteria.
-
-% Tzipilevich et al (2017) showed that in liquid, resistant bacteria can obtain receptors from sensitive bacteria by exchange of surface molecules through vesicles.
-
-% Brockhurst et al (2006) transferred a bacteria-phage population every 24 hours into a new spatially structured environment to mimic a slowly changing environemnt as an intermediate between constantly shaking liquid and static non-mixed environment. Thy observe coexistence and evolution of bacteria to become resistant but no coevolution, meaning the phages do not evolve in this experiment. However, coexistence is possible in this kind of environment while it is not possible in liquid.
-
-% Mitarai et al (2023) showed that a dense bacterial colony provides shielding for bacteria inside the colony leaving the edges unprotected to infection.
-
-% Eriksen et al (2024) showed that T4 phages can penetrate deep into a colony and infect bacteria in the center, therefore challenging survival of the community.
-
-% Attrill et al (2023) show that nutrient availability for bacteria can change the interactions between phages and E. coli in spatially structured environments. 
-
-% Rabinovitch et al (2002) show that phage development in E coli is growth rate dependent and especially burst size changes with growth rate.
-% However, Golec et al (2014) could show that nonetheless in experiments phages are present in bacteria and can slowly replicate.
-
-% Hunter et al (2021) study reaction-diffusion systems with a focus on T7 and the behavior of pulled vs pushed waves. They motivate their model by experiments and then show that their experimental results can be explained by a transition from pulled to pushed wave in the dynamics between bacteria and phages. However, they only consider diffusing phages and ignore the bacteria to be able to diffuse.
-
 \section{Bacteriophages}
-Bacteriophages (phages) are viruses infecting bacteria. They have a receptor, binding to the bacterium, then the phage-DNA is injected in the bacterium. The replication machinery in the bacterium then replicates the phage DNA and after translation and transcription, new phages are assembled inside the bacterium. After some time, the host cell is lysed and new phages released.~\cite{Labrie2010-rl} This replication cycle of phage can vary slightly and two types of phages are defined. Lytic phages which lyse the cell immediately and lysogenic phages where the genomic material is first incorporated into the bacterial genome and only after some time or upon some trigger, phage replication and lysis is activated. In this project we will focus on lytic phages. Bacteria can develop resistance against phage through many mechanisms such as blocking the receptor, cleaving phage DNA upon entry or modifying the entry channels through which genomic material enters.~\cite{Labrie2010-rl} For this project we assume that phages cannot bind to resistant bacteria while we do not specify the exact resistance mechanism.
+Bacteriophages (phages) are viruses infecting bacteria. They are binding a receptor on the bacterium, then the phage-DNA is injected in the bacterium. The replication machinery in the bacterium then replicates the phage DNA and after translation and transcription, new phages are assembled inside the bacterium. After some time, the host cell is lysed and new phages released~\cite{Clokie2008-mc}. This replication cycle of phage can vary slightly and two types of phages are defined. Lytic phages which lyse the cell immediately and lysogenic phages where the genomic material is first incorporated into the bacterial genome and only after some time or upon some trigger, phage replication and lysis is activated~\cite{Young1992-nu, Howard-Varona2017-gi}. In this project we will focus on lytic phages. Bacteria can develop resistance against phage through many mechanisms such as blocking the receptor, cleaving phage DNA upon entry or modifying the entry channels through which genomic material enters~\cite{Labrie2010-rl}. For this project we assume that phages cannot permanently bind to resistant bacteria while we do not specify the exact resistance mechanism.
 
 \section{Experimental spatial expansion}
-Work on ecological interactions of bacteria and bacteriophages is mostly performed in well-mixed, liquid environments due to the simpler handling and homogeneity. One of the most prominent results in well-mixed environments is the rapid overtake of the dynamics by a resistant bacterial genotype outcompeting phage-sensitive ancestors without the phages being able to overcome this resistance.~\cite{Lenski1985-wb}  
-However, this does not agree with results when studying natural communities where one observes diverse communities. Recent work in our lab and from others takes the spatial structure of the environment into account and has shown that sensitive bacteria and phage exhibit more complex dynamics during expansion on a plate with survival of sensitive bacteria at the front and further continuous evolution of bacteria and phages resulting in a highly diverse community.~\cite{Shaer-Tamar2022-cq, Marchi2025-yu, Ping2020-vd}
+Work on ecological interactions of bacteria and bacteriophages is mostly performed in well-mixed, liquid environments due to the simpler handling and homogeneity~\cite{Bull2018-ha}. One of the most prominent results in well-mixed environments is the rapid overtake of the dynamics by a phage-resistant bacterial genotype out-competing phage-sensitive ancestors without the phages being able to overcome this resistance~\cite{Lenski1985-wb}.
+Assuming, this would also happen in natural communities, leads to a paradox: Why do phages still exist when phage-resistant bacteria can easily overtake the population? Looking at spatial structure, as one stark difference between these results and most natural communities, recent work in our lab and from others has shown that sensitive bacteria and phage exhibit more complex dynamics during expansion on a plate with survival of sensitive bacteria at the front and further continuous evolution of bacteria and phages resulting in a highly diverse community~\cite{Shaer-Tamar2022-cq, Marchi2025-yu, Ping2020-vd}. So, spatial structure seems to be one of the key factors to ensure diversity of populations.
 
 \section{Modeling of spatial expansion}
-To understand the underlying processes in such spatial expansion experiments, mathematical models and simulations are used. Commonly, models are separated into two major classes, single agent models where each bacterium and phage represent single agents and through this explicit modeling, single details such as exact position in the system can be measured. These models are limited in size due to being computationally expensive.~\cite{Nagarajan2022-rv} The second class are continuous models, often using differential equations, where densities are modeled rather than single bacteria or phages. These are more coarse but can capture dynamics and are computationally more feasible for larger systems.~\cite{Succurro2018-if} In this project, we are using a system of coupled~\gls{pde}s to model the system. As we are describing spatial expansion and the interaction between components, our model falls in the class of reaction-diffusion models. 
-Reaction-diffusion models are a class of models used to model spatial expansion processes. They are characterized by a diffusion part, describing expansion in space and a localized reaction part, describing the coupling to other components or to the environment. A well known reaction-diffusion equation in biological contexts is the Fisher-KPP-equation~\cite{Fisher1937-rd} describing e.g. the expansion of a growing population in an empty space. It is given by:
+To understand the underlying processes in such spatial expansion experiments, mathematical models and simulations are used. Commonly, models are separated into two major classes, single agent models where each bacterium and phage represent single agents and through this explicit modeling, single details such as exact position in the system can be measured. Examples using such models include explicit modeling of phage plaque formation~\cite{Valdez2025-io}. These models, as they are resolving single cell dynamics, are computationally expensive and, therefore, limited to small population sizes~\cite{Nagarajan2022-rv}. Consequently, they are less commonly used when studying larger population dynamics. The second class are continuous models, often using differential equations, where densities are modeled rather than single bacteria or phages. These are more coarse but can capture dynamics and are computationally more feasible for larger systems~\cite{Succurro2018-if}. In this project, we are using a system of coupled~\gls{pde} to model the system. As we are describing spatial expansion and the interaction between components, our model falls in the class of reaction-diffusion models. 
+Reaction-diffusion models are a class of models used to model spatial expansion processes. They are characterized by a diffusion part, describing expansion in space and a localized reaction part, describing the coupling to other components or to the environment. A well known reaction-diffusion equation in biological contexts is the Fisher-KPP-equation~\cite{Fisher1937-rd} describing e.g. the expansion of a growing population $A$ in an empty space. It is given by:
 \begin{equation}
     \frac{\text{d}A}{\text{d}t} = D_A \frac{\partial^2A}{\partial x^2} + \lambda_A A (1-A)
 \end{equation}
 where $D_A$ is the diffusion coefficient of $A$ and $\lambda_A$ is the replication rate of $A$.
-Existing models for bacteria-phage interactions studying spatial structure focus on infection of existing biofilms by phages~\cite{Simmons2020-cc}, phage plaque formation~\cite{Valdez2025-io, Smith2011-ae, Yin1992-th}, the effect of different growth media and parameter exploration on a bacteria-phage system~\cite{Wang2024-ye}, the invasion of an existing sensitive bacterial population by a wave of phages~\cite{Claydon2021-cu} or the effect of hitchhiking enabling phages to stay at a bacterial front despite their lower expansion speed~\cite{Ping2020-vd}. The impact of resistant bacteria on an expanding population in spatially structured environments, relevant in experimental setups such as the experiments conducted in our group~\cite{Shaer-Tamar2022-cq}, was not systematically studied to the best of our knowledge.
+
+\section{Modeling bacteria-phage interactions in a spatially structured environment}
+
+Several models of bacteria-phage interactions take spatial structure into account with various spatial structures. Biofilms were simulated and it was shown that phage-resistant bacteria in a biofilm can create niches in which phage-sensitive bacteria are protected from phage infection of the biofilm~\cite{Simmons2020-cc}. Phage plaque formation on an existing bacterial population is well studied and models explain the mechanistic creation of plaques~\cite{Valdez2025-io, Smith2011-ae, Yin1992-th}. Furthermore, the impact of different growth media with different degrees of spatial structure was studied using models and it was shown that phages and bacteria are co-transported in more structured environments~\cite{Wang2024-ye}. Most similar to the experiments conducted in our lab~\cite{Shaer-Tamar2022-cq}, the effect of hitchhiking enabling phages to stay at a bacterial front despite their lower expansion speed was studied~\cite{Ping2020-vd} and most recently, the invasion of an existing sensitive bacterial population by a wave of phages was mathematically described and it was shown that a novel selection mechanism for optimal speed exists if multiple traveling waves are coupled~\cite{Claydon2021-cu}. However, the impact of resistant bacteria on an expanding population in spatially structured environments, relevant in experimental settings such as the experiments carried out in our group~\cite{Shaer-Tamar2022-cq}, was not systematically studied, to the best of our knowledge.
