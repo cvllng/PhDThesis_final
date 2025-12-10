@@ -479,8 +479,8 @@
  \cleardoublepage
  \maketitleHebrew
  \cleardoublepage
- \makeacknowledgementsHebrew
- \cleardoublepage
+ %\makeacknowledgementsHebrew
+ %\cleardoublepage
 
  \pagestyle{plain}
  % We need to reset the displayed page number, but we don't want to
